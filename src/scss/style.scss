@@ -1,0 +1,38 @@
+@use 'sass:math';
+// Подключение шрифтов 
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Inter:wght@400;500;600;700&family=Lato:wght@700&family=Poppins:wght@600&family=Source+Sans+Pro:wght@700&display=swap');
+
+// Container & Breakpoints 
+
+// Ширина полотна (макета) значение брать из Figma
+$maxWidth: 1440;
+// Минимальная ширина страницы
+$minWidth: 320;
+// Ширина ограничивающего контейнера
+$maxWidthContainer: 1299;
+// Общий отступ у контейнера
+$containerPadding: 30;
+
+// Ширина срабатывания первого брейкпоинта
+$containerWidth: $maxWidthContainer + $containerPadding;
+$containerSidePadding: math.div($containerPadding, 2);
+
+// Брейк-поинты
+$pc: $containerWidth; // ПК, ноутбуки, некоторые планшеты в горизонтальном положении
+$tablet: 991.98 + px;; // Планшеты, некоторые телефоны в горизонтальном положении
+$mobile: 767.98 + px; // Телефоны L
+$mobileSmall: 479.98 + px; // Телефоны S
+
+// Global Scss files
+@import './vars';
+@import './reset';
+@import './global';
+@import './common';
+
+// Sections or Pages SCSS-files imports
+@import './header';
+@import './home';
+@import './footer';
+
+// Libs
+// @import './libs/swiper';

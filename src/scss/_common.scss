@@ -1,0 +1,53 @@
+// Заголовки, общие БЄМ блоки и проче ==============
+
+.button {
+   padding: 12px 16px;
+   color: $whiteColor;
+   background-color: $orangeColor;
+   border-radius: 30px;
+   transition: transform 0.3s ease;
+   cursor: pointer;
+   &:hover {
+      background-color: rgba($color: $orangeColor, $alpha: 0.8);
+      transform: scale(1.1);
+   }
+}
+
+.title {
+   font-family: $fontInter;
+   font-size: 48px;
+   font-weight: 700;
+   line-height: 150%;
+   span {
+      color: $orangeColor;
+   }
+}
+
+.subtitle {
+   position: relative;
+   padding: 0px 0px 0px 35px;
+   margin-bottom: 8px;
+   color: $orangeDarkColor;
+   line-height: 150%;
+   &::before {
+      position: absolute;
+      content: '';
+      top: calc(50% - 1px);
+      left: 0;
+      width: 19px;
+      height: 2px;
+      background-color: $blackColor;
+   }
+}
+
+.input {
+   padding: 15px;
+   font-size: 16px;
+   color: $inputTextColor;
+   border: 1px solid $inputBorderColor;
+   border-radius: 5px;
+   &:focus {
+      outline: none;
+   }
+
+}
